@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Movable Type Pro 7.0rc1">
+<meta name="description" content="ナビゲーション ">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/custom_for_mt.css">
+<link rel="stylesheet" href="/_dev/hljs/styles/atom-one-dark.css">
+<link rel="start" href="/" title="Home">
+<link rel="alternate" href="/atom.xml" type="application/atom+xml" title="Recent Entries">
+<link rel="canonical" href="/cat13/">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Open Graph Protocol -->
+<meta property="og:title" content="ナビゲーション">
+<meta property="og:url" content="/cat13/">
+<meta property="og:image" content="/blogimg/og_image.png">
+<meta property="og:description" content="ナビゲーション ">
+<title>ナビゲーション-【dev】Red Magic Systems-【dev】Red Magic Systems</title>
+</head>
+<body>
+<div class="blog-masthead">
+<div class="container">
+<nav class="blog-nav">
+<a href="/" class="blog-nav-item">Home</a>
+<a href="/about/" class="blog-nav-item">About</a>
+<a href="/atom.xml" class="blog-nav-item">Feed</a>
+</nav>
+</div>
+</div>
+<div class="container">
+<header class="blog-header">
+<h1 class="blog-title">【dev】Red Magic Systems</h1>
+<p class="lead blog-description"></p>
+</header>
+<div class="row">
+<main class="col-sm-8 blog-main">
+<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<li><a href="/">Home</a></li>
+<li>ナビゲーション</li>
+</ul>
+<article id="entry-124" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/navbar-badge.html" rel="bookmark">ラベルつきナビバー</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T12:36:17+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat14/">ラベル</a></li>
+</ul>
+</footer>
+<div class="well well-sm">ナビバーの項目にもラベルを付与できます</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<ul class="nav nav-pills" role="tablist">
+<li role="presentation" class="active"><a href="#">Home</a></li>
+<li role="presentation"><a href="#">東急東横線 <span class="badge">21</span></a></li>
+<li role="presentation"><a href="#">東急多摩川線 <span class="badge">7</span></li>
+</ul>
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;ul class=&quot;nav nav-pills&quot; role=&quot;tablist&quot;&gt;
+&lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot;&gt;東急東横線 &lt;span class=&quot;badge&quot;&gt;21&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot;&gt;東急多摩川線 &lt;span class=&quot;badge&quot;&gt;7&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;</code>
+</pre>
+</div>
+</article>
+<article id="entry-120" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/pager.html" rel="bookmark">ページャー</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T12:25:56+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat13/">ナビゲーション</a></li>
+</ul>
+</footer>
+<div class="well well-sm">ページャーの記述を行います</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<nav aria-label="...">
+<ul class="pager">
+<li><a href="#">前へ</a></li>
+<li><a href="#">次へ</a></li>
+</ul>
+</nav>
+<nav aria-label="...">
+<ul class="pager">
+<li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> 横浜方面</a></li>
+<li class="next"><a href="#">渋谷方面 <span aria-hidden="true">&rarr;</span></a></li>
+</ul>
+</nav>
+<nav aria-label="...">
+<ul class="pager">
+<li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> 桜木町方面</a></li>
+<li class="next"><a href="#">渋谷方面 <span aria-hidden="true">&rarr;</span></a></li>
+</ul>
+</nav>
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;nav aria-label=&quot;...&quot;&gt;
+&lt;ul class=&quot;pager&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;前へ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;次へ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;nav aria-label=&quot;...&quot;&gt;
+&lt;ul class=&quot;pager&quot;&gt;
+&lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;larr;&lt;/span&gt; 横浜方面&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;渋谷方面 &lt;span aria-hidden=&quot;true&quot;&gt;&amp;rarr;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;nav aria-label=&quot;...&quot;&gt;
+&lt;ul class=&quot;pager&quot;&gt;
+&lt;li class=&quot;previous disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;larr;&lt;/span&gt; 桜木町方面&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;渋谷方面 &lt;span aria-hidden=&quot;true&quot;&gt;&amp;rarr;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;</code>
+</pre>
+</div>
+</article>
+<article id="entry-119" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/pagenation.html" rel="bookmark">ページネーション</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T12:22:08+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat13/">ナビゲーション</a></li>
+</ul>
+</footer>
+<div class="well well-sm">ページネーションの記述はこの通りです。</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<nav aria-label="Page navigation">
+<ul class="pagination">
+<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2<span class="sr-only">(current)</span></a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">5</a></li>
+<li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+</ul>
+</nav>
+<nav aria-label="Page navigation">
+<ul class="pagination pagination-lg">
+<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2<span class="sr-only">(current)</span></a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">5</a></li>
+<li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+</ul>
+</nav>
+<nav aria-label="Page navigation">
+<ul class="pagination pagination-sm">
+<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2<span class="sr-only">(current)</span></a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">5</a></li>
+<li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+</ul>
+</nav>
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;nav aria-label=&quot;Page navigation&quot;&gt;
+&lt;ul class=&quot;pagination&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;nav aria-label=&quot;Page navigation&quot;&gt;
+&lt;ul class=&quot;pagination pagination-lg&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;nav aria-label=&quot;Page navigation&quot;&gt;
+&lt;ul class=&quot;pagination pagination-sm&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;</code>
+</pre>
+</div>
+</article>
+<article id="entry-118" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/post-7.html" rel="bookmark">パンくずリスト</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T12:20:41+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat13/">ナビゲーション</a></li>
+</ul>
+</footer>
+<div class="well well-sm">パンくずリストの表記方法です。</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<ol class="breadcrumb">
+<li><a href="#">ホーム</a></li>
+<li><a href="#">東急</a></li>
+<li class="active">田園都市線</li>
+</ol>
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;ol class=&quot;breadcrumb&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;ホーム&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;東急&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;田園都市線&lt;/li&gt;
+&lt;/ol&gt;</code>
+</pre>
+</div>
+</article>
+<article id="entry-117" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/navbar-inverse.html" rel="bookmark">ナビバー【反転】</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T12:18:36+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat13/">ナビゲーション</a></li>
+</ul>
+</footer>
+<div class="well well-sm">反転イメージのナビバーです。.navbar-defaultを.navbar-inverseに変更します。</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-fixed" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">ロゴ</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-fixed">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">京王<span class="sr-only">(current)</span></a></li>
+<li><a href="#">東京メトロ</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">JR<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">湘南新宿ライン</a></li>
+<li><a href="#">埼京線</a></li>
+<li><a href="#">山手線</a></li>
+</ul>
+</li>
+</ul>
+<form class="navbar-form navbar-left">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#">Link</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">東急<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">東横線</a></li>
+<li><a href="#">田園都市線</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;nav class=&quot;navbar navbar-inverse&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+&lt;div class=&quot;navbar-header&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-fixed&quot; aria-expanded=&quot;false&quot;&gt;
+&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;ロゴ&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-fixed&quot;&gt;
+&lt;ul class=&quot;nav navbar-nav&quot;&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;京王&lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;東京メトロ&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;dropdown&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;JR&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class=&quot;dropdown-menu&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;湘南新宿ライン&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;埼京線&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;山手線&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;form class=&quot;navbar-form navbar-left&quot;&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;
+&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+&lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;dropdown&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;東急&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class=&quot;dropdown-menu&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;東横線&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;田園都市線&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
+&lt;/div&gt;&lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;</code>
+</pre>
+</div>
+</article>
+<article id="entry-116" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/navbar-fixedbottom.html" rel="bookmark">ウィンドウの下に固定するナビバー</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T12:11:17+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat13/">ナビゲーション</a></li>
+</ul>
+</footer>
+<div class="well well-sm">ウィンドウの下部に固定するナビバーには、 .navbar-fixed-bottomを付与し、ナビバーの高さ分のpaddingをbody要素に付与してください。</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<!-- サイトの表示がおかしくなりますので、コメントアウトしています
+<nav class="navbar navbar-default navbar-fixed-bottom">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-fixedbottom" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">ロゴ</a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-fixedbottom">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">京王<span class="sr-only">(current)</span></a></li>
+<li><a href="#">東京メトロ</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">JR<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">湘南新宿ライン</a></li>
+<li><a href="#">埼京線</a></li>
+<li><a href="#">山手線</a></li>
+</ul>
+</li>
+</ul>
+<form class="navbar-form navbar-left">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#">Link</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">東急<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">東横線</a></li>
+<li><a href="#">田園都市線</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+-->
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;!-- サイトの表示がおかしくなりますので、コメントアウトしています
+&lt;nav class=&quot;navbar navbar-default navbar-fixed-bottom&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+&lt;div class=&quot;navbar-header&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-fixedbottom&quot; aria-expanded=&quot;false&quot;&gt;
+&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;ロゴ&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-fixedbottom&quot;&gt;
+&lt;ul class=&quot;nav navbar-nav&quot;&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;京王&lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;東京メトロ&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;dropdown&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;JR&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class=&quot;dropdown-menu&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;湘南新宿ライン&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;埼京線&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;山手線&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;form class=&quot;navbar-form navbar-left&quot;&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;
+&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+&lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;dropdown&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;東急&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class=&quot;dropdown-menu&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;東横線&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;田園都市線&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+--&gt;</code>
+</pre>
+</div>
+</article>
+<article id="entry-115" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/navbar-fixedtop.html" rel="bookmark">画面上部に固定するナビバー</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T12:04:26+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat13/">ナビゲーション</a></li>
+</ul>
+</footer>
+<div class="well well-sm">画面上部に固定するタイプのナビゲーション。container系クラスの外側に.navbar-fixed-topを付与し、body要素にナビゲーションと同じ高さのpaddingをもうけてください。</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<!-- サイトの表示がおかしくなりますので、コメントアウトしています
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-fixed" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">ロゴ</a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-fixed">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">京王<span class="sr-only">(current)</span></a></li>
+<li><a href="#">東京メトロ</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">JR<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">湘南新宿ライン</a></li>
+<li><a href="#">埼京線</a></li>
+<li><a href="#">山手線</a></li>
+</ul>
+</li>
+</ul>
+<form class="navbar-form navbar-left">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#">Link</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">東急<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">東横線</a></li>
+<li><a href="#">田園都市線</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+-->
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;!-- サイトの表示がおかしくなりますので、コメントアウトしています
+&lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+&lt;div class=&quot;navbar-header&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-fixed&quot; aria-expanded=&quot;false&quot;&gt;
+&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;ロゴ&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-fixed&quot;&gt;
+&lt;ul class=&quot;nav navbar-nav&quot;&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;京王&lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;東京メトロ&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;dropdown&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;JR&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class=&quot;dropdown-menu&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;湘南新宿ライン&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;埼京線&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;山手線&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;form class=&quot;navbar-form navbar-left&quot;&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;
+&lt;/div&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+&lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;dropdown&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;東急&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;ul class=&quot;dropdown-menu&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;東横線&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;田園都市線&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+--&gt;</code>
+</pre>
+</div>
+</article>
+<article id="entry-114" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/nav-nonnavlink.html" rel="bookmark">ナビゲーションではないリンク</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T12:02:31+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat13/">ナビゲーション</a></li>
+</ul>
+</footer>
+<div class="well well-sm">ナビバーのテキストリンク（ナビゲーションではない）を配置するには、a.navbar-linkとします。</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+<p class="navbar-text navbar-right">表示がおかしいかたは<a href="#" class="navbar-link">こちら</a></p>
+</div>
+</div>
+</nav>
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;nav class=&quot;navbar navbar-default&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+&lt;div class=&quot;navbar-header&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;collapsed navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-5&quot; aria-expanded=&quot;false&quot;&gt;
+&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot;&gt;Brand&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-5&quot;&gt;
+&lt;p class=&quot;navbar-text navbar-right&quot;&gt;表示がおかしいかたは&lt;a href=&quot;#&quot; class=&quot;navbar-link&quot;&gt;こちら&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/nav&gt;</code>
+</pre>
+</div>
+</article>
+<article id="entry-113" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/navbar-text.html" rel="bookmark">ナビバーに表示するテキスト</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T11:59:39+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat13/">ナビゲーション</a></li>
+</ul>
+</footer>
+<div class="well well-sm">テキスト要素に.navbar-textを付与します</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-4" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-4">
+<p class="navbar-text">東京急行電鉄株式会社</p>
+</div>
+</div>
+</nav>
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;nav class=&quot;navbar navbar-default&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+&lt;div class=&quot;navbar-header&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;collapsed navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-4&quot; aria-expanded=&quot;false&quot;&gt;
+&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot;&gt;Brand&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-4&quot;&gt;
+&lt;p class=&quot;navbar-text&quot;&gt;東京急行電鉄株式会社&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/nav&gt;</code>
+</pre>
+</div>
+</article>
+<article id="entry-112" class="blog-post entry-asset entry asset hentry h-entry" itemscope itemType="http://schema.org/BlogPosting">
+<h2 class="blog-post-title entry-title p-name" itemprop="headline"><a href="/2018/02/post-6.html" rel="bookmark">ナビバーに配置するボタン</a></h2>
+<footer class="asset-meta blog-post-meta">
+<ul class="asset-meta-list">
+<li class="asset-meta-list-item">投稿日:<time datetime="2018-02-26T11:58:36+09:00" class="updated published dt-published" itemprop="datePublished">2018年2月26日</time></li>
+<li class="asset-meta-list-item">by <span class="author entry-author vcard p-author h-card"><span class="fn">takeoka</span></span></li>
+<li class="asset-meta-list-item">Category: <a itemprop="articleSection" rel="tag" href="/cat13/">ナビゲーション</a></li>
+</ul>
+</footer>
+<div class="well well-sm">ボタン要素に.navbar-btnを付与します。</div>
+<div class="asset-body e-content" itemprop="articleBody">
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+<button type="button" class="btn btn-default navbar-btn">発車</button>
+</div>
+</div>
+</nav>
+</div>
+<hr>
+<div class="rm-code highlight">
+<pre>
+<button class="btn clip" data-toggle="tooltip" title="コピーしました!"><i class="glyphicon glyphicon-paperclip" aria-hidden="true"></i><span class="sr-only">クリップボードへコピー</span></button>
+<code class="html">&lt;nav class=&quot;navbar navbar-default&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+&lt;div class=&quot;navbar-header&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;collapsed navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-3&quot; aria-expanded=&quot;false&quot;&gt;
+&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot;&gt;Brand&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-3&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-default navbar-btn&quot;&gt;発車&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/nav&gt;</code>
+</pre>
+</div>
+</article>
+<ul class="pager">
+<li class="previous"><a rel="prev" href="/cgi-bin/mt7/mt-search.cgi?IncludeBlogs=1&amp;template_id=221&amp;limit=10&amp;archive_type=Category&amp;category=13&amp;page=2">過去の記事</a></li>
+</ul>
+</main>
+<aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+<div class="sidebar-module sidebar-module-inset">
+<h4><a href="/about/">About</a></h4>
+<p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+</div><div class="sidebar-module">
+<h4>Categories</h4>
+<ol class="list-unstyled">
+<li>モジュール
+<ol class="list-unstyled">
+<li><a href="/-modules/bootstrap/">Bootstrap (1)</a>
+</li>
+</ol>
+</li>
+<li><a href="/jquery/">jQuery (11)</a>
+</li>
+<li><a href="/cat16/">アラート (2)</a>
+</li>
+<li><a href="/cat4/">グリッドシステム (8)</a>
+</li>
+<li><a href="/cat11/">グリフアイコン (1)</a>
+</li>
+<li><a href="/cat6/">テキスト (25)</a>
+</li>
+<li><a href="/cat7/">テーブル (8)</a>
+</li>
+<li><a href="/cat12/">ドロップダウン (9)</a>
+</li>
+<li><a href="/cat13/">ナビゲーション (18)</a>
+</li>
+<li><a href="/cat20/">パネル (8)</a>
+</li>
+<li><a href="/cat8/">フォーム (23)</a>
+</li>
+<li><a href="/cat17/">プログレスバー (6)</a>
+</li>
+<li><a href="/cat10/">ヘルパー (12)</a>
+</li>
+<li><a href="/cat9/">ボタン (17)</a>
+</li>
+<li><a href="/cat18/">メディアオブジェクト (3)</a>
+</li>
+<li><a href="/cat14/">ラベル (4)</a>
+</li>
+<li><a href="/cat19/">リストグループ (7)</a>
+</li>
+<li><a href="/cat5/">画像 (4)</a>
+</li>
+<li><a href="/cat15/">見出し (2)</a>
+</li>
+</ol>
+</div>
+<div class="sidebar-module">
+<h4>Archives</h4>
+<ol class="list-unstyled">
+<li><a href="/2018/04/">2018年4月 (1)</a></li>
+<li><a href="/2018/02/">2018年2月 (159)</a></li>
+</ol>
+</div>
+<div class="sidebar-module">
+<h4>Search</h4>
+<form class="site-search" method="get" id="search" action="/cgi-bin/mt7/mt-search.cgi">
+<input class="form-control" type="text" name="search" value="" placeholder="検索...">
+<input type="hidden" name="IncludeBlogs" value="1">
+<input type="hidden" name="limit" value="20">
+</form>
+</div>
+</aside>
+</div>
+</div>
+<footer class="blog-footer">
+<ul>
+<li>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</li>
+<li>Theme for Movable Type by <a href="http://atstyle.biz">@Style</a>.</li>
+<li>Powered by <a href="http://www.sixapart.jp/movabletype/">Movable Type</a></li>
+</ul>
+<p><a href="#top">Back to top</a></p>
+</footer>
+<script src="/js/jquery_min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/clipboard_min.js"></script>
+<script src="/js/myscript.js"></script>
+<script type="text/javascript" src="/_dev/hljs/highlight.pack.js"></script>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
