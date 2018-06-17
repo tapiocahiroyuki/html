@@ -31,7 +31,7 @@
     <li class="list-group-item list-group-item-success col-md dropdown">
   <a href="#collapseNav01" class="btn btn-link text-success d-md-none" data-toggle="collapse" href="#collapseNav01" role="button" aria-expanded="false" aria-controls="collapseMenu">ブログ</a>
   <button class="btn btn-link text-secondary dropdown-toggle d-none d-md-inline-block" type="button" id="menu-item-01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ブログ</button>
-  <ul id="collapseNav01" class="list-group collapse dropdown-menu" aria-labelledby="menu-item-01">
+  <ul id="collapseNav01" class="list-group collapse dropdown-menu dropdown-menu-md" aria-labelledby="menu-item-01">
     <li class="list-group-item list-group-item-primary dropdown-item"><a href="#">渋谷</a></li>
     <li class="list-group-item list-group-item-primary dropdown-item"><a href="#">恵比寿</a></li>
     <li class="list-group-item list-group-item-primary dropdown-item"><a href="#">目黒</a></li>
@@ -41,7 +41,7 @@
     <li class="list-group-item list-group-item-success col-md">
   <a id="menu-item-02" href="#collapseNav02" class="btn btn-link text-success d-md-none" data-toggle="collapse" href="#collapseNav02" role="button" aria-expanded="false" aria-controls="collapseMenu">写真</a>
   <button class="btn btn-link text-secondary dropdown-toggle d-none d-md-inline-block" type="button" id="menu-item-02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">写真</button>
-  <ul id="collapseNav02" class="list-group collapse dropdown-menu" aria-labelledby="menu-item-02">
+  <ul id="collapseNav02" class="list-group collapse dropdown-menu dropdown-menu-md" aria-labelledby="menu-item-02">
     <li class="list-group-item list-group-item-primary"><a href="#">大崎</a></li>
     <li class="list-group-item list-group-item-primary"><a href="#">品川</a></li>
     <li class="list-group-item list-group-item-primary"><a href="#">田町</a></li>
@@ -50,7 +50,7 @@
     <li class="list-group-item list-group-item-success col-md">
   <a id="menu-item-03" href="#collapseNav03" class="btn btn-link text-success d-md-none" data-toggle="collapse" href="#collapseNav03" role="button" aria-expanded="false" aria-controls="collapseMenu">ナレッジ</a>
   <button class="btn btn-link text-secondary dropdown-toggle d-none d-md-inline-block" type="button" id="menu-item-03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ナレッジ</button>
-  <ul id="collapseNav03" class="list-group collapse dropdown-menu" aria-labelledby="menu-item-03">
+  <ul id="collapseNav03" class="list-group collapse dropdown-menu dropdown-menu-md" aria-labelledby="menu-item-03">
     <li class="list-group-item list-group-item-primary"><a href="#">有楽町</a></li>
     <li class="list-group-item list-group-item-primary"><a href="#">東京</a></li>
     <li class="list-group-item list-group-item-primary"><a href="#">神田</a></li>
@@ -59,7 +59,7 @@
     <li class="list-group-item list-group-item-success col-md">
   <a id="menu-item-04" href="#collapseNav04" class="btn btn-link text-success d-md-none" data-toggle="collapse" href="#collapseNav04" role="button" aria-expanded="false" aria-controls="collapseMenu">オススメの一冊</a>
   <button class="btn btn-link text-secondary dropdown-toggle d-none d-md-inline-block" type="button" id="menu-item-04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">オススメの一冊</button>
-  <ul id="collapseNav04" class="list-group collapse dropdown-menu" aria-labelledby="menu-item-04">
+  <ul id="collapseNav04" class="list-group collapse dropdown-menu dropdown-menu-md" aria-labelledby="menu-item-04">
     <li class="list-group-item list-group-item-primary"><a href="#">御徒町</a></li>
     <li class="list-group-item list-group-item-primary"><a href="#">上野</a></li>
     <li class="list-group-item list-group-item-primary"><a href="#">鶯谷</a></li>
@@ -271,6 +271,55 @@
 <script src="/js/clipboard_min.js"></script>
 <script src="/js/myscript.js"></script>
 <script src="/js/breakpoints.min.js"></script>
+<script type="text/javascript">
+Breakpoints({
+  xs: {
+      min: 0,
+      max: 767
+  },
+  // Small devices (tablets)
+  sm: {
+      min: 576,
+      max: 767
+  },
+  // Medium devices (desktops)
+  md: {
+      min: 768,
+      max: 999
+  },
+  // Large devices (large desktops)
+  lg: {
+      min: 1000,
+      max: 1087
+  },
+  xl: {
+      min: 1088,
+      max: Infinity
+  }
+});
+
+function enableDropdown(obj){$(obj).addClass('dropdown-menu');}
+function disableDropdown(obj){$(obj).removeClass('dropdown-menu');}
+// Breakpointがxs、smの場合dropdownを無効にする
+Breakpoints.on('xs sm', {
+    enter: function() {
+        console.info('enter '+ this.name);
+        disableDropdown('.dropdown-menu-md');
+    },
+    leave: function() {
+        console.info('leave '+ this.name);
+        enableDropdown('.dropdown-menu-md');
+    }
+}).on('md lg xl', {
+    enter: function() {
+        console.info('enter '+ this.name);
+        enableDropdown('.dropdown-menu-md');
+    },
+    leave: function() {
+        console.info('leave '+ this.name);
+        disableDropdown('.dropdown-menu-md');
+}});
+</script>
 <script type="text/javascript" src="/js/highlight.pack.min.js"></script>
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 <!-- <script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?55XhnyL0KvI%3D&aa=1&ab=2" charset="utf-8"></script> -->
