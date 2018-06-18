@@ -26,7 +26,7 @@
 <div>
   <div id="brand"><a href="/">Red Magic Systems</a></div>
   <div id="hamburger"><a id="menu-item-01" class="btn btn-link" data-toggle="collapse" href=".collapseNav" role="button" aria-expanded="false" aria-controls="collapseMenu"><i class="fa fa-bars text-light"></i><span class="sr-only">メニュー</span></a></div>
-  <div id="collapseNav" class="nocollapse-md collapseNav">
+  <div id="collapseNav" class="nocollapse-md collapseNav collapse">
   <ul class="top-categories">
     <li class="dropdown">
   <a href="#collapseNav01" data-toggle="collapse" href="#collapseNav01" role="button" aria-expanded="false" aria-controls="collapseMenu">ブログ</a>
@@ -69,9 +69,9 @@
   </div>
   <div id="sns" class="p-2 bg-info col-12 col-md-3 order-md-2 collapseNav collapse nocollapse-md">
   <ol class="d-flex justify-content-around p-2 list-inline mb-0">
-  <li class="list-inline-item" itemprop="position"><a href="#"><i class="fa fa-camera"></i></a></li>
-  <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-  <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+  <li itemprop="position"><a href="#"><i class="fa fa-camera"></i></a></li>
+  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+  <li><a href="#"><i class="fa fa-envelope"></i></a></li>
   </ul>
   </div>
 
@@ -256,11 +256,11 @@
 
 <footer class="container-fluid bg-light border-top border-primary mt-4 p-3 text-center" itemscope itemprop="http://schema.org/WPFooter">
 <ul id="footer-linklist" class="list-inline">
-<li class="list-inline-item"><a href="#" class="btn btn-link" itemprop="publishingPrinciples">Red Magic Systemsについて</a></li>
-<li class="list-inline-item"><a href="#" class="btn btn-link">サイトマップ</a></li>
-<li class="list-inline-item"><a href="#" class="btn btn-link">リンク</a></li>
-<li class="list-inline-item"><a href="#" class="btn btn-link">お問い合わせ</a></li>
-<li class="list-inline-item"><a href="#" class="btn btn-link" target="_blank">facebookページ</a></li>
+<li><a href="#" class="btn btn-link" itemprop="publishingPrinciples">Red Magic Systemsについて</a></li>
+<li><a href="#" class="btn btn-link">サイトマップ</a></li>
+<li><a href="#" class="btn btn-link">リンク</a></li>
+<li><a href="#" class="btn btn-link">お問い合わせ</a></li>
+<li><a href="#" class="btn btn-link" target="_blank">facebookページ</a></li>
 </ul>
 <p class="text-center text-dark">Copyright © <time class="currentYear" itemprop="copyrightYear">2018</time> Takeoka Hiroyuki. All Rights Reserved.<br>Powered by Movable Type</p>
 </footer>
@@ -298,8 +298,8 @@ Breakpoints({
   }
 });
 
-function enableDropdown(obj){$(obj).addClass('dropdown-menu');}
-function disableDropdown(obj){$(obj).removeClass('dropdown-menu');}
+function enableDropdown(obj){$(obj).addClass('dropdown-menu').removeClass('collapse');}
+function disableDropdown(obj){$(obj).removeClass('dropdown-menu').addClass('collapse');}
 // Breakpointがxs、smの場合dropdownを無効にする
 Breakpoints.on('xs sm', {
     enter: function() {
