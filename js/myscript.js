@@ -47,3 +47,22 @@ Breakpoints.on('xs sm', {
         console.info('leave '+ this.name);
         disableDropdown('.dropdown-menu-md');
 }});
+
+// ページトップへ戻る
+jQuery('#pagetop').addClass('normal');
+
+jQuery(function(){
+	jQuery(window).scroll(function() {
+		if (jQuery(this).scrollTop() > 100) {
+			$('#pagetop').addClass('active').removeClass('normal');
+		} else {
+			$('#pagetop').removeClass('active').addClass('normal');
+		}
+	});
+	jQuery('#pagetop').click(function () {
+        jQuery('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
