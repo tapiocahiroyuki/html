@@ -177,7 +177,7 @@
 </div>
 </div><!-- /.row -->
 
-<pre class="code1"><button class="copy btn" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" title="コピーしました！">Copy</button><code id="code1" class="html">
+<pre class="code"><button class="copy" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" title="コピーしました！" data-placement="top" data-trigger="manualy">Copy</button><code id="code1" class="html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot; itemscope itemtype=&quot;http://schema.org/Blog&quot;&gt;&#10;
 &lt;head&gt;
@@ -498,26 +498,6 @@
 <script type="text/javascript" src="/js/highlight.pack.min.js"></script>
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 <script src="/js/myscript.js"></script>
-<script>
-var clipboard = new ClipboardJS('.btn');
-
-clipboard.on('success', function(e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    console.info('Trigger:', e.trigger);
-
-    e.clearSelection();
-});
-
-clipboard.on('error', function(e) {
-    console.error('Action:', e.action);
-    console.error('Trigger:', e.trigger);
-});
-
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-</script>
 <!-- <script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?55XhnyL0KvI%3D&aa=1&ab=2" charset="utf-8"></script> -->
 
 

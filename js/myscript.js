@@ -66,3 +66,26 @@ jQuery(function(){
         return false;
     });
 });
+
+//
+// コードのコピーボタン。Tooltipとclipboard.js動作用
+//
+var clipboard = new ClipboardJS('.copy');
+
+clipboard.on('success', function(e) {
+    $(e.trigger).tooltip('show');
+
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+$('copy').on('shown.bs.tooltip', function () {
+  $(this).tooltip('hide');
+})
