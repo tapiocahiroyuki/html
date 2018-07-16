@@ -175,14 +175,22 @@
 </div>
 </div><!-- /.row -->
 
-<pre><code class="html">
+<pre class="code1"><button class="copy btn" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" title="コピーしました！">Copy</button><code id="code1" class="html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot; itemscope itemtype=&quot;http://schema.org/Blog&quot;&gt;&#10;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-<a href="#" class="copy">Copy</a></code></pre>
+</code></pre>
+
+<!-- Target -->
+<textarea id="bar">Mussum ipsum cacilds...</textarea>
+
+<!-- Trigger -->
+<button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
+    Cut to clipboard
+</button>
 
 <div class="table-responsive">
   <caption>十日市場駅</caption>
@@ -483,11 +491,31 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/clipboard_min.js"></script>
+<script src="/js/clipboard.min.js"></script>
 <script src="/js/breakpoints.min.js"></script>
 <script type="text/javascript" src="/js/highlight.pack.min.js"></script>
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 <script src="/js/myscript.js"></script>
+<script>
+var clipboard = new ClipboardJS('.btn');
+
+clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 <!-- <script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?55XhnyL0KvI%3D&aa=1&ab=2" charset="utf-8"></script> -->
 
 
