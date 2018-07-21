@@ -105,7 +105,6 @@
 <div><img src="https://placehold.it/728x90" alt="rakuten1"></div>
 </section><!-- /#rbnr-side-top-->
 </div>
-<article>
 <p id="eyecatch"><img class="img-fluid" src="https://placehold.it/1200x630" alt="Generic placeholder image"></p>
 <h1 class="page">ブログ記事のタイトル。人生の目的について語ろう<small>青春時代を思い出しながら</small></h1>
 <div class="time-labels">
@@ -119,9 +118,8 @@
 </ul>
 </section>
 
-
+<article>
 <p>秋の日のヴィオロンのためいきの身にしみてひたぶるにうら悲し。鐘のおとに胸ふたぎ色かへて涙ぐむ過ぎし日のおもひでや。げにわれは</p>
-<h2>見出し2</h2>
 <h3>見出し3</h3>
 <h4>見出し4</h4>
 <h5>見出し5</h5>
@@ -177,7 +175,7 @@
 </div>
 </div><!-- /.row -->
 
-<pre class="code"><button class="copy" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" title="コピーしました！" data-placement="top" data-trigger="manualy">Copy</button><code id="code1" class="html">
+<pre class="code1"><button class="copy btn" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" title="コピーしました！" data-placement="auto">Copy</button><code id="code1" class="html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;ja&quot; itemscope itemtype=&quot;http://schema.org/Blog&quot;&gt;&#10;
 &lt;head&gt;
@@ -217,15 +215,15 @@
 
 <p>これは<strong>注意すべき点</strong>です。<em>強調</em>もします。<del>やっぱり無しね</del>。<b>単なる太字</b></p>
 
-<div class="card text-center">
-  <h5 class="card-header bg-light">おすすめのお店</h5>
-  <div class="card-body d-md-flex flex-row-reverse p-3 pr-md-0" itemscope itemtype="http://schema.org/Rating">
-  <img class="img-fluid mb-3 d-block col-md-3" src="https://placehold.it/200x150">
-  <div class="flex-grow-1">
+<div class="recommend-shop">
+  <h4 class="card-header">おすすめのお店</h4>
+  <div class="card-body" itemscope itemtype="http://schema.org/Rating">
+  <div class="recommend-img"><img src="https://placehold.it/200x150"></div>
+  <div>
     <h5 class="card-title" itemprop="author">○○軒</h5>
-    <p class="rating r-3"><strong class="text-danger" itemprop="ratingValue">3</strong><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-light"></i><i class="fa fa-star text-light"></i>
-<small class="text-light">（<span itemprop="worstRating">0</span>〜<span itemprop="bestRating">5</span>の6段階評価において）</small></p>
-    <p class="card-text text-left">3つ星いただきました。3つ星いただきました。3つ星いただきました。3つ星いただきました。3つ星いただきました。3つ星いただきました。</p>
+    <p class="rating r-3"><strong class="text-danger" itemprop="ratingValue">3</strong><i></i><i></i><i></i><i></i><i></i>
+<small>（<span itemprop="worstRating">0</span>〜<span itemprop="bestRating">5</span>の6段階評価において）</small></p>
+    <p class="card-text">3つ星いただきました。3つ星いただきました。3つ星いただきました。3つ星いただきました。3つ星いただきました。3つ星いただきました。</p>
     <a href="#" class="btn btn-primary">お店のサイトへ</a>
 </div>
   </div>
@@ -276,7 +274,7 @@
 </aside>
 
 <section id="comments">
-
+<h2>コメント</h2>
 <ul class="list-unstyled">
   <li class="media">
     <img class="mr-3 rounded-circle" src="https://placehold.it/64x64" alt="Generic placeholder image">
@@ -334,14 +332,9 @@
 </section>
 
 <section>
-<div class="comments-open" id="comments-open">
+<div id="comment-post">
+  <div>
 <h3 class="comments-open-header">コメントする</h3>
-
-<ul class="list-notice">
-<li>コメントは承認後に表示されます。</li>
-<li>同じ記事にハンドルを変更しながら投稿された場合は、コメントを削除します。</li>
-<li>記事の内容を無視したコメント、煽り･いやみ･皮肉･感情的なコメントは承認いたしません。</li>
-</ul>
 <div class="comments-open-content">
 
 <form method="post" action="" name="comments_form" id="comments-form" onsubmit="if (this.bakecookie.checked) rememberMe(this)">
@@ -350,33 +343,52 @@
 <input name="__lang" value="ja" type="hidden">
 <div id="comments-open-data">
 <div id="comment-form-name">
-<label for="comment-author">名前（必須。スペース、<span class="text-warning">言葉のつぶやき</span>、匿名は不可です）</label>
-<input id="comment-author" name="author" size="30" value="">
+<div>
+<h4 class="form-text h5">名前<span class="badge-danger">必須</span></h4>
+</div>
+<div>
+<input id="comment-author" name="author" value="" placeholder="※おなまえ" required>
+</div>
+<label for="comment-author">（必須。スペース、<span class="text-warning">言葉のつぶやき</span>、匿名は不可です）</label>
 </div>
 <div id="comment-form-email">
-<label for="comment-email">電子メール（省略可。お問い合わせの場合は必ず入力してください）</label>
-<input id="comment-email" name="email" size="30" value="">
+<div>
+<h4>電子メール<span class="badge-danger">必須</span></h4>
+</div>
+<div>
+<input id="comment-email" name="email" placeholder="※めーる" required>
+</div>
+<label for="comment-email">（省略可。お問い合わせの場合は必ず入力してください）</label>
 </div>
 <div id="comment-form-url">
-<label for="comment-url">お手持ちのサイトのURL（省略可）</label>
-<input id="comment-url" name="url" size="30" value="">
+<div>
+<h4 for="comment-url">お手持ちのサイトのURL<span class="badge-light">任意</span></h4>
+</div>
+<div>
+<input id="comment-url" name="url" class="form-control">
+</div>
 </div>
 
 </div>
 <div id="comments-open-text">
-<label for="comment-text">コメント </label>
-<textarea id="comment-text" name="text" rows="15" cols="50" maxlength="3000"></textarea>
+<h4>コメント<span class="badge-danger">必須</span></h4>
+<textarea id="comment-text" name="text" rows="8" maxlength="3000"></textarea>
 </div>
 
 <div id="comments-open-footer">
-<input accesskey="v" name="preview" id="comment-preview" value="確認" type="submit">
-<input accesskey="s" name="post" id="comment-submit" value="投稿" type="submit">
-
+<p><button class="btn-light" name="preview" id="comment-preview" type="submit">確認</button></p>
+<p><button class="btn-primary" name="post" id="comment-submit" type="submit">投稿</button></p>
 </div>
 </form>
 <noscript>
 <p class="alert alert-danger">コメントを投稿するにはJavaScriptを有効にしてください</p>
 </noscript>
+<ul class="list-notice">
+<li>コメントは承認後に表示されます。</li>
+<li>同じ記事にハンドルを変更しながら投稿された場合は、コメントを削除します。</li>
+<li>記事の内容を無視したコメント、煽り･いやみ･皮肉･感情的なコメントは承認いたしません。</li>
+</ul>
+</div>
 </div>
 </div>
 </section>
@@ -498,6 +510,26 @@
 <script type="text/javascript" src="/js/highlight.pack.min.js"></script>
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 <script src="/js/myscript.js"></script>
+<script>
+var clipboard = new ClipboardJS('.btn');
+
+clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 <!-- <script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?55XhnyL0KvI%3D&aa=1&ab=2" charset="utf-8"></script> -->
 
 
