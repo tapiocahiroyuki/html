@@ -68,24 +68,44 @@ jQuery(function(){
 });
 
 //
-// コードのコピーボタン。Tooltipとclipboard.js動作用
+// NEWバッジを30日だけ表示
 //
-var clipboard = new ClipboardJS('.copy');
+var elapsedDay = 30; //日数
+
+$('time.new').each(function(){
+var now = Date.now();
+var dateTime = Date.parse($(this).attr('datetime'));
+if(dateTime > 0 && dateTime + (1000 * 60 * 60 * 24 * elapsedDay) > now){
+$(this).addClass('active');
+} else {
+}
+});
+
+//
+// コードのコピーボタン。Tooltipとclipboard.js動作用。要素に.btnのクラスを必ず付与すること。
+//
+var clipboard = new ClipboardJS('.btn');
 
 clipboard.on('success', function(e) {
-    $(e.trigger).tooltip('show');
-
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    var tooltipID = '#' + $(e.trigger).attr('aria-describedby');
+    console.log(tooltipID + '=' + $(tooltipID).html());
+    $('.tooltip').addClass("secondary").find('.tooltip-inner').text('コピーしました!');
     e.clearSelection();
 });
 
 clipboard.on('error', function(e) {
     console.error('Action:', e.action);
     console.error('Trigger:', e.trigger);
+    $('.tooltip').addClass("danger").find('.tooltip-inner').text('コピーできませんでした!');
 });
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
-})
-$('copy').on('shown.bs.tooltip', function () {
-  $(this).tooltip('hide');
-})
+});
+
+$('.btn[data-toggle="tooltip"]').focusout(function(){
+$('.tooltip').removeClass('secondary danger');
+});
