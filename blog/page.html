@@ -341,57 +341,20 @@ mtAttachEvent("unload", mtEntryOnUnload);
 </div><!-- /.main-col -->
 <div class="side-col">
 <aside id="side-contents">
-<div class="sidebar-module">
-<h4>Categories</h4>
-<ol class="list-unstyled">
-<li><a href="http://test01.rdm-sys.yokohama/blog/">ブログ (2)</a>
-<ol class="list-unstyled">
-<li><a href="http://test01.rdm-sys.yokohama/blog/knowledge/">知識 (1)</a>
+<section id="side-categorylist" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<h3>カテゴリー</h3>
+<ul class="categorylist">
+<li><h4><a href="http://test01.rdm-sys.yokohama/blog/">ブログ</a></h4>
+<ul>
+<li><a href="http://test01.rdm-sys.yokohama/blog/knowledge/">知識</a><span>1</span></li>
+</ul>
 </li>
-</ol>
+<li><h4><a href="http://test01.rdm-sys.yokohama/bootstrap/">bootstrap</a></h4>
+<ul>
+</ul>
 </li>
-<li>bootstrap
-<ol class="list-unstyled">
-<li>パネル
-</li>
-<li>メディアオブジェクト
-</li>
-<li>ボタン
-</li>
-<li>見出し
-</li>
-<li>ヘルパー
-</li>
-<li>グリッドシステム
-</li>
-<li>リストグループ
-</li>
-<li>ラベル
-</li>
-<li>ナビゲーション
-</li>
-<li>テキスト
-</li>
-<li>テーブル
-</li>
-<li>画像
-</li>
-<li>アラート
-</li>
-<li>プログレスバー
-</li>
-<li>jQuery
-</li>
-<li>グリフアイコン
-</li>
-<li>フォーム
-</li>
-<li>ドロップダウン
-</li>
-</ol>
-</li>
-</ol>
-</div>
+</ul>
+</section>
 <div class="sidebar-module">
 <h4>Search</h4>
 <form class="site-search" method="get" id="search" action="/cgi-bin/mt7/mt-search.cgi">
@@ -400,32 +363,6 @@ mtAttachEvent("unload", mtEntryOnUnload);
 <input type="hidden" name="limit" value="20">
 </form>
 </div>
-<section id="side-categorylist" itemscope itemtype="http://schema.org/SiteNavigationElement">
-<h3>カテゴリー</h3>
-<ul class="categorylist">
-<li><h4><a href="#">妙なブログ</a></h4>
-<ul>
-<li><a href="#">かいもの</a><span>28</span></li>
-<li><a href="#">しごと</a><span>28</span></li>
-<li><a href="#">おきにいり</a><span>28</span></li>
-<li><a href="#">Mac</a><span>28</span></li>
-<li><a href="#">イラスト</a><span>28333</span></li>
-</ul></li>
-<li><h4><a href="#">感動の一冊</a></h4>
-<ul>
-<li><a href="#">経営者</a><span>28</span></li>
-<li><a href="#">偉人</a><span>28</span></li>
-<li><a href="#">物語</a><span>28</span></li>
-<li><a href="#">まんが</a><span>28333</span></li>
-</ul></li>
-<li><h4><a href="#">知りたい知識</a></h4>
-<ul>
-<li><a href="#">Web制作</a><span>28</span></li>
-<li><a href="#">Mac</a><span>28</span></li>
-<li><a href="#">ネットワーク</a><span>28333</span></li>
-</ul></li>
-</ul>
-</section>
 <section id="carousel-photo" itemscope itemtype="http://schema.org/ImageObject">
 <h3>フォト</h3>
 <div  class="carousel slide mb-2" data-ride="carousel">
