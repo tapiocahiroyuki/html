@@ -230,6 +230,14 @@ mtAttachEvent("unload", mtEntryOnUnload);
 </div><!-- /.main-col -->
 <div class="side-col">
 <aside id="side-contents">
+<div class="sidebar-module">
+<h3>記事の検索</h3>
+<form class="site-search mb-3" method="get" id="search" action="/cgi-bin/mt7/mt-search.cgi">
+<input class="form-control" type="text" name="search" value="" placeholder="検索...">
+<input type="hidden" name="IncludeBlogs" value="1">
+<input type="hidden" name="limit" value="20">
+</form>
+</div>
 <section id="side-categorylist" itemscope itemtype="http://schema.org/SiteNavigationElement">
 <h3>カテゴリー</h3>
 <ul class="categorylist">
@@ -244,37 +252,24 @@ mtAttachEvent("unload", mtEntryOnUnload);
 </li>
 </ul>
 </section>
-<div class="sidebar-module">
-<h4>Search</h4>
-<form class="site-search" method="get" id="search" action="/cgi-bin/mt7/mt-search.cgi">
-<input class="form-control" type="text" name="search" value="" placeholder="検索...">
-<input type="hidden" name="IncludeBlogs" value="1">
-<input type="hidden" name="limit" value="20">
-</form>
-</div>
-<section id="carousel-photo" itemscope itemtype="http://schema.org/ImageObject">
+<section id="carousel-photo" itemscope="" itemtype="http://schema.org/ImageObject">
 <h3>フォト</h3>
-<div  class="carousel slide mb-2" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://placehold.it/800x600" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img src="https://placehold.it/800x600" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img src="https://placehold.it/800x600" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carousel-photo" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-photo" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+<div class="carousel slide mb-2" data-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<a class="asset-image" href="http://test01.rdm-sys.yokohama/assets/P9210170.jpg"><span><img alt="P9210170.jpg" src="http://test01.rdm-sys.yokohama/assets_c/2018/07/P9210170-thumb-1036xauto-8.jpg" title="P9210170.jpg"></span></a>
+</div><!-- /.carousel-item -->
+<div class="carousel-item">
+<a class="asset-image" href="http://test01.rdm-sys.yokohama/assets/P7010009.JPG"><span><img alt="ジャック" src="http://test01.rdm-sys.yokohama/assets_c/2018/07/P7010009-thumb-1036xauto-7.jpg" title="ジャック"></span></a>
+</div><!-- /.carousel-item -->
+<div class="carousel-item">
+<a class="asset-image" href="http://test01.rdm-sys.yokohama/assets/P7019818_1%20%281%29.jpg"><span><img alt="横浜の朝焼け" src="http://test01.rdm-sys.yokohama/assets_c/2018/07/P7019818_1%20%281%29-thumb-1036xauto-4.jpg" title="横浜の朝焼け"></span></a>
+</div><!-- /.carousel-item -->
+<div class="carousel-item">
+<a class="asset-image" href="http://test01.rdm-sys.yokohama/assets/kotetsu.jpg"><span><img alt="こてつとDSi" src="http://test01.rdm-sys.yokohama/assets_c/2018/07/kotetsu-thumb-1036xauto-6.jpg" title="こてつとDSi"></span></a>
+</div><!-- /.carousel-item -->
+</div><!-- /.carousel-inner -->
+</div><!-- /.carousel.slide -->
 </section><!-- /#carousel-photo-->
 <div id="rbnr-side-under">
 <section itemscope itemprop="http://schema.org/WPAdBlock">
