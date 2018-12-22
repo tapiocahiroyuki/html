@@ -1,6 +1,6 @@
 // The cookie name to use for storing the blog-side comment session cookie.
 var mtCookieName = "mt_blog_user";
-var mtCookieDomain = ".test01.rdm-sys.yokohama";
+var mtCookieDomain = ".192.168.43.52";
 var mtCookiePath = "/";
 var mtCookieTimeout = 14400;
 
@@ -55,13 +55,13 @@ MT.cons = function () {
 
 MT.core = function (o) {
   var _debug = false;
-
+  
   return {
     
     connect : function (url,respType,respHandler) {
       var xh = mtGetXmlHttp();
       if (!xh) return false;
-
+      
       xh.onreadystatechange = function() {
         if ( xh.readyState == 4 ) {
           if ( xh.status && ( xh.status != 200 ) ) {
@@ -71,25 +71,25 @@ MT.core = function (o) {
               case 'json':
                 respHandler(JSON.parse(xh.responseText));
                 break;
-
+                
               case 'xml':
                 break;
-
+                
               case 'text':
                 break;
             }
           }
         }
       };
-
+      
       xh.open('GET',url);
       xh.send(null);
     },
-
+    
     getEl : function (el) {
       return MT.util.checkNodeType(el)==='element' ? id : (document.getElementById(el) || false);
     },
-
+    
     addEvent : function (el,type,func,obj) {
       if(!obj && document.addEventListener) {
         el.addEventListener(type,func,false);
@@ -103,13 +103,13 @@ MT.core = function (o) {
             func.call(obj,event);
           });
         } else {
-          el.attachEvent('on' + type,function () {
+          el.attachEvent('on' + type,function () {          
             func.call(el,event);
           });
         }
       }
     },
-
+    
     
     log : function (level,msg) {
       if(_debug && window.console) {
@@ -121,9 +121,9 @@ MT.core = function (o) {
           case 'log':
             console[level](msg);
             break;
-
+            
           default:
-            return false;
+            return false; 
         }
       } else {
         return false;
@@ -138,7 +138,7 @@ MT.util = function () {
     toggleVisibility : {
       show : function () {
         var i = arguments.length;
-
+        
         while(i--) {
           if(MT.util.checkNodeType(arguments[i])==='element') {
             arguments[i].style.visibility = 'visible';
@@ -147,7 +147,7 @@ MT.util = function () {
           }
         }
       },
-
+      
       hide : function () {
         var i = arguments.length;
         while(i--) {
@@ -159,7 +159,7 @@ MT.util = function () {
         }
       }
     },
-
+    
     toggleDisplay : {
       show : function () {
         var i = arguments.length;
@@ -171,7 +171,7 @@ MT.util = function () {
           }
         }
       },
-
+      
       hide : function () {
         var i = arguments.length;
         while(i--) {
@@ -183,7 +183,7 @@ MT.util = function () {
         }
       }
     },
-
+    
     
     findDefiningParent : function (origin) {
       if(MT.util.checkNodeType(origin)==='element') {
@@ -195,7 +195,7 @@ MT.util = function () {
       }
       return false;
     },
-
+    
     
     checkNodeType : function (obj) {
       if (obj && obj.nodeName){
@@ -231,27 +231,27 @@ MT.util = function () {
       nav,
       currentCommentsSpan,
       topCurrentCommentsSpan;
-
+            
   M.addEvent(window,'load',_init);
-
+  
   /**
    * Initializes the class
-   *
+   * 
    * @return void
    */
   function _init () {
     if(!MT.entryCommentCount) {
       return;
     }
-
+    
     _initializeVariables();
     _setCommentOffset(false);
     _checkForAnchor();
-    _setCurrentComments();
+		_setCurrentComments();
     _toggleNavLinks();
     _initializeEvents();
   }
-
+  
   
   function _initializeVariables() {
     cache = {};
@@ -265,58 +265,58 @@ MT.util = function () {
     totalComments = MT.entryCommentCount;
     commentsTotalPages = Math.ceil(totalComments / commentsPerPage);
     pageNum = 1;
-
-    loadingIcon = "<img title='Loading...' src='http://test01.rdm-sys.yokohama/mt7/mt-static/images/indicator.white.gif' alt='Loading' />";
-
+    
+    loadingIcon = "<img title='Loading...' src='http://192.168.43.52/mt7/mt-static/images/indicator.white.gif' alt='Loading' />";
+    
     commentContentDiv = M.getEl("comments-content");
     topNav = M.getEl("top-comment-nav");
     nav = M.getEl("comment-nav");
-
+    
     currentCommentsSpan = M.getEl("current-comments");
     topCurrentCommentsSpan = M.getEl("top-current-comments");
   }
-
+  
   function _initializeEvents() {
     if (commentsPerPage < totalComments) {
       M.addEvent(nav,'click',_handleEvents);
       M.addEvent(topNav,'click',_handleEvents);
     }
   }
-
+  
   
   function _checkForAnchor() {
     var found = String(window.location.hash).match( /comment-(\d{1,6})/ );
-
-    if (found) {
-      M.log(c.DEBUG,found);
-      if (!Object.prototype.hasOwnProperty.call(M.getEl(found[0]), 'className')) {
-        if (_findIdMatch(found[1])) {
-          pageNum = Math.floor(commentArrId / commentsPerPage) + 1;
-          M.log(c.DEBUG,'Comment Array Id: ' + commentArrId);
-          M.log(c.DEBUG,'Comments Per Page: ' + commentsPerPage);
-          M.log(c.DEBUG,'Page Number: ' + pageNum);
-          M.log(c.DEBUG,'Comment Offset: ' + _getCommentOffset());
-          _updateComments();
-        }
-      }
-    }
+		
+		if (found) {
+		  M.log(c.DEBUG,found);
+			if (!Object.prototype.hasOwnProperty.call(M.getEl(found[0]), 'className')) {
+				if (_findIdMatch(found[1])) {
+    			pageNum = Math.floor(commentArrId / commentsPerPage) + 1;
+    			M.log(c.DEBUG,'Comment Array Id: ' + commentArrId);
+    			M.log(c.DEBUG,'Comments Per Page: ' + commentsPerPage);
+    			M.log(c.DEBUG,'Page Number: ' + pageNum);
+    			M.log(c.DEBUG,'Comment Offset: ' + _getCommentOffset());
+    			_updateComments();
+    		}
+			}
+		}
   }
-
+  
   
   function _setCommentOffset() {
     commentsOffset = commentsPerPage * (pageNum-1);
   }
-
+  
   
   function _getCommentOffset() {
     return commentsOffset;
   }
-
+  
   
   function _handleEvents (e) {
     var origin = e.target || e.srcElement,
         parentId;
-
+        
     // stupid IE
     origin = origin.id && M.getEl(origin.id) || false;
 
@@ -325,7 +325,7 @@ MT.util = function () {
     } else {
       return false;
     }
-
+    
     switch(origin.nodeName) {
       case 'A':
         switch (parentId) {
@@ -334,7 +334,7 @@ MT.util = function () {
             if(e.preventDefault) {
               e.preventDefault();
             } else {
-              e.returnValue = false;
+              e.returnValue =	false;
             }
             if(!isLoading) {
               _previousPage();
@@ -345,7 +345,7 @@ MT.util = function () {
             if(e.preventDefault) {
               e.preventDefault();
             } else {
-              e.returnValue = false;
+              e.returnValue =	false;
             }
             if(!isLoading) {
               _nextPage();
@@ -355,7 +355,7 @@ MT.util = function () {
         break;
     }
   }
-
+  
   
   function _toggleNavLinks () {
     M.log(c.DEBUG,M.getEl('top-prev-comments'));
@@ -363,23 +363,23 @@ MT.util = function () {
       u.toggleVisibility.show('prev-comments');
       u.toggleVisibility.show('top-prev-comments');
     }
-
+    
     if(pageNum >= 1 && pageNum !== commentsTotalPages) {
       u.toggleVisibility.show('next-comments');
       u.toggleVisibility.show('top-next-comments');
     }
-
+    
     if(pageNum===1 || nav.style.visibility==='hidden') {
       u.toggleVisibility.hide('prev-comments');
       u.toggleVisibility.hide('top-prev-comments');
     }
-
+    
     if(pageNum===commentsTotalPages || nav.style.visibility==='hidden') {
       u.toggleVisibility.hide('next-comments');
       u.toggleVisibility.hide('top-next-comments');
     }
   }
-
+  
   
   function _nextPage () {
     if(pageNum < commentsTotalPages) {
@@ -387,7 +387,7 @@ MT.util = function () {
       _updateComments();
     }
   }
-
+  
   
   function _previousPage() {
     if(pageNum > 1) {
@@ -395,40 +395,40 @@ MT.util = function () {
       _updateComments();
     }
   }
-
+  
   
   function _findIdMatch (id) {
     var len = MT.commentIds.length;
-
-    while (len--) {
-      if (MT.commentIds[len] == id) {
-        commentAnchor = "comment-" + id;
-        commentArrId = len;
-        return true;
-      }
-    }
-
-    return false;
+    
+  	while (len--) {
+  		if (MT.commentIds[len] == id) {
+  			commentAnchor = "comment-" + id;
+  			commentArrId = len;
+  			return true;
+  		}
+  	}
+  	
+  	return false;
   }
-
+  
   
   function _setCurrentComments() {
     var commentsOnPage = pageNum != commentsTotalPages ? commentsOffset + commentsPerPage : totalComments;
-
+    
     _setCurrentCommentsContent([commentsOffset+1," - ",commentsOnPage].join(''));
   }
-
+  
   
   function _setCurrentCommentsContent(currentCommentsHTML) {
     currentCommentsSpan.innerHTML = currentCommentsHTML;
     topCurrentCommentsSpan.innerHTML = currentCommentsHTML;
   }
-
+  
   
   function _setCommentContent(commentHTML) {
     commentContentDiv.innerHTML = commentHTML;
   }
-
+  
   
   function _updateComments() {
     var comments, jsonUrl, cacheKey, offset;
@@ -441,7 +441,7 @@ MT.util = function () {
         .join('-')
         .replace(/[^a-zA-Z0-9-]/g, '');
     jsonUrl  = [
-        "http://test01.rdm-sys.yokohama/cgi-bin/mt7/mt-comments.cgi?__mode=comment_listing&direction=",
+        "http://192.168.43.52/cgi-bin/mt7/mt-comments.cgi?__mode=comment_listing&direction=",
         direction,
         "&entry_id=",
         entryID,
@@ -455,8 +455,8 @@ MT.util = function () {
         "&ts=",
         new Date().getTime()
       ].join('');
-
-    if (!commentAnchor) {
+  	
+  	if (!commentAnchor) {
       commentAnchor = "comments-content";
     }
 
@@ -475,7 +475,7 @@ MT.util = function () {
     _refreshComments(json.comments);
     isLoading = false;
   }
-
+  
   
   function _refreshComments(commentData) {
     _setCommentContent(commentData);
@@ -654,7 +654,7 @@ function mtFetchUser(cb) {
         var u = mtGetUser();
         var script = document.createElement('script');
         var ts = new Date().getTime();
-        script.src = 'http://test01.rdm-sys.yokohama/cgi-bin/mt7/mt-comments.cgi?__mode=userinfo&blog_id=1&jsonp=' + cb + '&ts=' + ts + '&sid=' + u.sid;
+        script.src = 'http://192.168.43.52/cgi-bin/mt7/mt-comments.cgi?__mode=userinfo&blog_id=3&jsonp=' + cb + '&ts=' + ts + '&sid=' + u.sid;
         (document.getElementsByTagName('head'))[0].appendChild(script);
     }
 }
@@ -664,7 +664,7 @@ function mtVerifySession(cb) {
     var script = document.createElement('script');
     var ts = new Date().getTime();
     var u = mtGetUser();
-    script.src = 'http://test01.rdm-sys.yokohama/cgi-bin/mt7/mt-comments.cgi?__mode=verify_session&blog_id=1&jsonp=' + cb + '&ts=' + ts + '&sid=' + u.sid;
+    script.src = 'http://192.168.43.52/cgi-bin/mt7/mt-comments.cgi?__mode=verify_session&blog_id=3&jsonp=' + cb + '&ts=' + ts + '&sid=' + u.sid;
     (document.getElementsByTagName('head'))[0].appendChild(script);
 }
 
@@ -682,7 +682,7 @@ function mtCommentOnSubmit(f) {
         mtRequestSubmitted = true;
 
         if (f.armor)
-            f.armor.value = '0aec7fe55373cc9e7d7f18ab862bba34d653bc0d';
+            f.armor.value = 'ada8c08863fcefba180dd36122ca7539a3cca57f';
         if (f.bakecookie && f.bakecookie.checked)
             mtSaveUser(f);
 
@@ -794,13 +794,13 @@ mtAttachEvent('usersignin', mtUserOnLoad);
 function mtSignIn() {
     var doc_url = document.URL;
     doc_url = doc_url.replace(/#.+/, '');
-    var url = 'http://test01.rdm-sys.yokohama/cgi-bin/mt7/mt-comments.cgi?__mode=login&blog_id=1';
+    var url = 'http://192.168.43.52/cgi-bin/mt7/mt-comments.cgi?__mode=login&blog_id=3';
     if (is_preview) {
         if ( document['comments_form'] ) {
             var entry_id = document['comments_form'].entry_id.value;
             url += '&entry_id=' + entry_id;
         } else {
-            url += '&return_url=http%3A%2F%2Ftest01.rdm-sys.yokohama%2F';
+            url += '&return_url=http%3A%2F%2F192.168.43.52%2F_handson%2F';
         }
     } else {
         url += '&return_url=' + encodeURIComponent(doc_url);
@@ -839,13 +839,13 @@ function mtSignOut(entry_id) {
     mtClearUser();
     var doc_url = document.URL;
     doc_url = doc_url.replace(/#.+/, '');
-    var url = 'http://test01.rdm-sys.yokohama/cgi-bin/mt7/mt-comments.cgi?__mode=handle_sign_in&static=0&logout=1&blog_id=1';
+    var url = 'http://192.168.43.52/cgi-bin/mt7/mt-comments.cgi?__mode=handle_sign_in&static=0&logout=1&blog_id=3';
     if (is_preview) {
         if ( document['comments_form'] ) {
             var entry_id = document['comments_form'].entry_id.value;
             url += '&entry_id=' + entry_id;
         } else {
-            url += '&return_url=http%3A%2F%2Ftest01.rdm-sys.yokohama%2F';
+            url += '&return_url=http%3A%2F%2F192.168.43.52%2F_handson%2F';
         }
     } else {
         url += '&return_url=' + encodeURIComponent(doc_url);
@@ -885,7 +885,7 @@ function mtShowGreeting() {
         } else {
             var user_link;
             if ( u.is_author ) {
-                user_link = '<a href="http://test01.rdm-sys.yokohama/cgi-bin/mt7/mt-comments.cgi?__mode=edit_profile&blog_id=1&return_url=' + encodeURIComponent( location.href );
+                user_link = '<a href="http://192.168.43.52/cgi-bin/mt7/mt-comments.cgi?__mode=edit_profile&blog_id=3&return_url=' + encodeURIComponent( location.href );
                 user_link += '">' + u.name + '</a>';
             } else {
                 // registered user, but not a user with posting rights
@@ -907,6 +907,7 @@ function mtShowGreeting() {
     }
     el.innerHTML = phrase;
 
+    mtShowCaptcha();
 }
 
 
@@ -923,7 +924,7 @@ function mtReplyCommentOnClick(parent_id, author) {
     reply_text = reply_text.replace(/__AUTHOR__/, author);
     label.innerHTML = reply_text;
 
-    checkbox.value = parent_id;
+    checkbox.value = parent_id; 
     checkbox.checked = true;
     try {
         // text field may be hidden
@@ -1130,14 +1131,14 @@ window.onload = mtInit;
 function mtLoggedIn(ott) {
     var script = document.createElement('script');
     var ts = new Date().getTime();
-    script.src = 'http://test01.rdm-sys.yokohama/cgi-bin/mt7/mt-comments.cgi?__mode=userinfo&jsonp=mtSaveUserInfo&ott=' + ott;
+    script.src = 'http://192.168.43.52/cgi-bin/mt7/mt-comments.cgi?__mode=userinfo&jsonp=mtSaveUserInfo&ott=' + ott;
     (document.getElementsByTagName('head'))[0].appendChild(script);
 }
 
 function mtRefreshUserInfo(sid) {
     var script = document.createElement('script');
     var ts = new Date().getTime();
-    script.src = 'http://test01.rdm-sys.yokohama/cgi-bin/mt7/mt-comments.cgi?__mode=userinfo&jsonp=mtSaveUserInfo&sid=' + sid;
+    script.src = 'http://192.168.43.52/cgi-bin/mt7/mt-comments.cgi?__mode=userinfo&jsonp=mtSaveUserInfo&sid=' + sid;
     (document.getElementsByTagName('head'))[0].appendChild(script);
 }
 

@@ -1,182 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>【dev】Red Magic Systems</title>
-    <link rel="alternate" type="text/html" href="http://test01.rdm-sys.yokohama/" />
-    <link rel="self" type="application/atom+xml" href="http://test01.rdm-sys.yokohama/atom.xml" />
-    <id>tag:test01.rdm-sys.yokohama,2018-07-21://1</id>
-    <updated>2018-07-22T11:22:15Z</updated>
+    <title>Red Magic Systems</title>
+    <link rel="alternate" type="text/html" href="http://test01.rdmsys.net/" />
+    <link rel="self" type="application/atom+xml" href="http://test01.rdmsys.net/atom.xml" />
+    <id>tag:test01.rdmsys.net,2018-11-06://1</id>
+    <updated>2018-11-25T12:32:24Z</updated>
     
     <generator uri="http://www.sixapart.com/movabletype/">Movable Type Pro 7.0.1</generator>
 
 <entry>
-    <title>ブログ記事のタイトル。人生の目的について語ろう</title>
-    <link rel="alternate" type="text/html" href="http://test01.rdm-sys.yokohama/blog/page.html" />
-    <id>tag:test01.rdm-sys.yokohama,2018://1.4</id>
+    <title>はろーわーるど</title>
+    <link rel="alternate" type="text/html" href="http://test01.rdmsys.net/post.html" />
+    <id>tag:test01.rdmsys.net,2018://1.1</id>
 
-    <published>2018-07-22T09:55:26Z</published>
-    <updated>2018-07-22T11:22:15Z</updated>
+    <published>2018-11-25T12:31:47Z</published>
+    <updated>2018-11-25T12:32:24Z</updated>
 
-    <summary>秋の日のヴィオロンのためいきの身にしみてひたぶるにうら悲し。鐘のおとに胸ふたぎ色...</summary>
+    <summary>こんにちは世界ｌ これからおもしろいBlogを構築します。...</summary>
     <author>
-        <name>vagrant</name>
+        <name>Tapioca</name>
         
     </author>
     
-        <category term="ブログ" scheme="http://www.sixapart.com/ns/types#category" />
     
-    
-    <content type="html" xml:lang="ja" xml:base="http://test01.rdm-sys.yokohama/">
-        <![CDATA[<p>秋の日のヴィオロンのためいきの身にしみてひたぶるにうら悲し。鐘のおとに胸ふたぎ色かへて涙ぐむ過ぎし日のおもひでや。げにわれは</p>
-<h3>見出し3</h3>
-<h4>見出し4</h4>
-<h5>見出し5</h5>
-<div id="list-style" class="row">
-<div class="col-6">
-<ul class="list list-bullet-01">
-<li>東京
-<ul class="list-notice">
-<li>N700系で運行</li>
-</ul>
-</li>
-<li>新横浜</li>
-<li>小田原</li>
-<li>熱海</li>
-</ul>
-</div>
-<div class="col-6">
-<dl class="list list-bullet-02">
-<dt class="text-info">3年生</dt>
-<dd>佐久間さんがこのたびITパスポートに合格しました。
-<ul class="list-notice">
-<li>ほんのまぐれです（笑）ほんのまぐれですほんのまぐれです（本人：談）</li>
-</ul>
-
-</dd>
-<dt class="text-danger">2年生</dt>
-<dd>微積分はやっぱり難しかった。</dd>
-</dl>
-</div>
-<div class="col-6">
-<ul class="list list-bullet-03">
-<li>渋谷
-<ul class="list-bullet-04">
-<li>代官山</li>
-<li class="list-bullet-05">中目黒</li>
-<li>祐天寺</li>
-<li>学芸大学</li>
-</ul></li>
-<li>原宿</li>
-<li>代々木</li>
-<li>新宿</li>
-<li>新大久保</li>
-</ul>
-</div>
-<div class="col-6">
-<ol>
-<li>いちご</li>
-<li>にんじん</li>
-<li>サンダル</li>
-<li>ヨット</li>
-<li value="99800">ごましお</li>
-</ol>
-</div>
-</div><!-- /.row -->
-
-<pre class="code1"><button class="copy btn" data-clipboard-action="copy" data-clipboard-target="#code1" data-toggle="tooltip" title="コピーします。" data-placement="auto">Copy</button><code id="code1" class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ja&quot; itemscope itemtype=&quot;http://schema.org/Blog&quot;&gt;&#10;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;</code></pre>
-
-<!-- Target -->
-<textarea id="bar">Mussum ipsum cacilds...</textarea>
-
-<!-- Trigger -->
-<button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
-    Cut to clipboard
-</button>
-
-<div class="table-responsive">
-  <caption>十日市場駅</caption>
-<table class="table table-condenced table-bordered table-striped">
-<thead>
-<tr><th>時</th><th>分</td></tr>
-</thead>
-<tbody>
-<tr><th>6</th><td>1 8 15 22 29<sup>十</sup> 36 43 50 57</td></tr>
-<tr><th>7</th><td>1 8 15 22 29 36 43 50 57</td></tr>
-<tr><th>8</th><td>1 8 15 22 29 36 43 50 57</td></tr>
-<tr><th>9</th><td>1 8 15 22 29 36 43 50 57</td></tr>
-<tr><th>10</th><td>1 8 15 22 29 36 43 50 57</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="alert alert-danger text-center">
-<h3>このキャンペーンは終了しました。</h3>
-<p><a href="#">現在開催中のキャンペーン</a>は こちら</p>
-</div>
-
-<p>これは<strong>注意すべき点</strong>です。<em>強調</em>もします。<del>やっぱり無しね</del>。<b>単なる太字</b></p>
-
-<div class="recommend-shop">
-  <h4 class="card-header">おすすめのお店</h4>
-  <div class="card-body" itemscope itemtype="http://schema.org/Rating">
-  <div class="recommend-img"><img src="https://placehold.it/200x150"></div>
-  <div>
-    <h5 class="card-title" itemprop="author">○○軒</h5>
-    <p class="rating r-3"><strong class="text-danger" itemprop="ratingValue">3</strong><i></i><i></i><i></i><i></i><i></i>
-<small>（<span itemprop="worstRating">0</span>〜<span itemprop="bestRating">5</span>の6段階評価において）</small></p>
-    <p class="card-text">3つ星いただきました。3つ星いただきました。3つ星いただきました。3つ星いただきました。3つ星いただきました。3つ星いただきました。</p>
-    <a href="#" class="btn btn-primary">お店のサイトへ</a>
-</div>
-  </div>
-</div>
-
-
-<!-- Large modal -->
-<button type="button" class="btn btn-block my-3 btn-primary" data-toggle="modal" data-target=".photo-modal">Large modal</button>
-
-<div class="modal photo-modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog h-100 p-2 mt-0" style="max-width: inherit;">
-    <div class="modal-content">
-
-<div class="card text-center p-2" style="vertical-align:middle;">
-  <img class="card-img-top m-auto w-auto" src="https://placehold.it/768x1024" alt="Card image cap" style="max-height: 80vh;max-width: 83vw;">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>]]>
-        
-    </content>
-</entry>
-
-<entry>
-    <title>モバイルSuicaの秘密</title>
-    <link rel="alternate" type="text/html" href="http://test01.rdm-sys.yokohama/blog/knowledge/mobile-suica.html" />
-    <id>tag:test01.rdm-sys.yokohama,2018://1.3</id>
-
-    <published>2018-07-21T14:44:25Z</published>
-    <updated>2018-07-21T14:47:08Z</updated>
-
-    <summary>秋の日のヰ゛オロンのためいきの身にしみてひたぶるにうら悲し。鐘のおとに胸ふたぎ色...</summary>
-    <author>
-        <name>vagrant</name>
-        
-    </author>
-    
-        <category term="ブログ" scheme="http://www.sixapart.com/ns/types#category" />
-    
-        <category term="知識" scheme="http://www.sixapart.com/ns/types#category" />
-    
-    
-    <content type="html" xml:lang="ja" xml:base="http://test01.rdm-sys.yokohama/">
-        <![CDATA[<p>秋の日のヰ゛オロンのためいきの身にしみてひたぶるにうら悲し。鐘のおとに胸ふたぎ色かへて涙ぐむ過ぎし日のおもひでや。げにわれはうらぶれてここかしこさだめなくとび散らふ落葉かな。</p>]]>
+    <content type="html" xml:lang="ja" xml:base="http://test01.rdmsys.net/">
+        <![CDATA[<p>こんにちは世界ｌ</p>
+<p>これからおもしろいBlogを構築します。</p>]]>
         
     </content>
 </entry>
