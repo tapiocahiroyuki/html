@@ -28,7 +28,7 @@
 </head>
 <body>
 <div class="container">
-<nav id="gnav" itemscope itemprop="http://schema.org/SiteNavigationElement" class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id="gnav" itemscope itemprop="http://schema.org/SiteNavigationElement" class="navbar navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/"><img src="/images/bootstrap-solid.svg" class="mr-2" alt="bootstrap" width="32" height="32"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -44,15 +44,38 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Dropdown
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="#">Action</a>
+<a class="dropdown-item" href="#">Another action</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="#">Something else here</a>
+</div>
+</li>
+
+<li class="nav-item dropdown-md">
+<a class="nav-link dropdown-md-toggle" href="#" id="navbarHybrid" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="navbarHybridCollapse">
+Dropdown
+</a>
+<div id="navbarHybridCollapse" class="dropdown-menu">
+<a class="dropdown-item" href="#">Action</a>
+<a class="dropdown-item" href="#">Another action</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="#">Something else here</a>
+</div>
+</li>
+
+      <li class="nav-item">
+  <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <div id="collapseExample" class="card card-body collapse">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
       </li>
     </ul>
   </div>
@@ -170,13 +193,13 @@
 <p><a href="/" class="rdm d-block">Red Magic Systems</a>Copyright © <time class="currentYear" itemprop="copyrightYear">2018</time> Takeoka Hiroyuki. All Rights Reserved.<br>Powered by Movable Type</p>
 </footer>
 <div id="pagetop"><a href="#"><span>ページトップへ戻る</span></a></div>
-<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.slim.min.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/clipboard.min.js"></script>
 <script src="/js/breakpoints.min.js"></script>
 <script type="text/javascript" src="/js/highlight.pack.min.js"></script>
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
-<!-- <script src="/js/myscript.js"></script> -->
+<script src="/js/myscript.js"></script>
 </body>
 </html>
