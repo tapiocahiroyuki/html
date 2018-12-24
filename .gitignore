@@ -1,2 +1,11 @@
 .DS_Store
 /node_modules
+wp-*
+!wp-config.php
+/mt7
+/pma
+!wp-content/
+/wp-content/index.php
+/wp-content/upgrade
+/wp-content/themes
+/wp-content/plugins
