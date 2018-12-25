@@ -1,2 +1,3 @@
-User-Agent:*
+# サイト全体をロボットからブロック
+User-agent: *
 Disallow: /

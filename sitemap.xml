@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.google.com/schemas/sitemap/0.9">
 <url>
-<loc>http://test01.rdm-sys.yokohama/</loc>
-</url>
-
-<url>
-<loc>http://test01.rdm-sys.yokohama/blog/</loc>
-</url>
-
-<url>
-<loc>http://test01.rdm-sys.yokohama/blog/knowledge/</loc>
+<loc>http://test01.rdmsys.net/</loc>
 </url>
 
 
 
 
 <url>
-<loc>http://test01.rdm-sys.yokohama/blog/page.html</loc>
-<lastmod>2018-07-22T11:22:15Z</lastmod>
-</url>
-
-<url>
-<loc>http://test01.rdm-sys.yokohama/blog/knowledge/mobile-suica.html</loc>
-<lastmod>2018-07-21T14:47:08Z</lastmod>
+<loc>http://test01.rdmsys.net/post.html</loc>
+<lastmod>2018-11-25T12:32:24Z</lastmod>
 </url>
 
 

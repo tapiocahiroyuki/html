@@ -26,26 +26,37 @@ Breakpoints({
   }
 });
 
-function enableDropdown(obj){$(obj).addClass('dropdown-menu').removeClass('collapse');}
-function disableDropdown(obj){$(obj).removeClass('dropdown-menu').addClass('collapse');}
+function enableDropdown(obj){
+$(obj)
+.addClass('dropdown')
+.find('.dropdown-md-toggle').attr('data-toggle','dropdown').addClass('dropdown-toggle').attr('href','#').end()
+.find('.collapse').addClass('dropdown-menu').removeClass('collapse');
+;}
+function enableCollapse(obj){
+var ariaCtl = $(obj).find('.dropdown-md-toggle').attr('aria-controls');
+$(obj)
+.removeClass('dropdown')
+.find('.dropdown-md-toggle').attr('data-toggle','collapse').addClass('dropdown-toggle').attr('href', '#' + ariaCtl).end()
+.find('.dropdown-menu').addClass('collapse').removeClass('dropdown-menu');
+;}
 // Breakpointがxs、smの場合dropdownを無効にする
 Breakpoints.on('xs sm', {
     enter: function() {
         console.info('enter '+ this.name);
-        disableDropdown('.dropdown-menu-md');
+        enableCollapse('.dropdown-md');
     },
     leave: function() {
         console.info('leave '+ this.name);
-        enableDropdown('.dropdown-menu-md');
+        enableDropdown('.dropdown-md');
     }
 }).on('md lg xl', {
     enter: function() {
         console.info('enter '+ this.name);
-        enableDropdown('.dropdown-menu-md');
+        enableDropdown('.dropdown-md');
     },
     leave: function() {
         console.info('leave '+ this.name);
-        disableDropdown('.dropdown-menu-md');
+        enableCollapse('.dropdown-md');
 }});
 
 // ページトップへ戻る
