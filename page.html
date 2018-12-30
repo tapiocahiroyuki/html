@@ -21,62 +21,49 @@
 <title>【dev】RedMagic systems</title>
 </head>
 <body>
-<div class="container-md">
-<nav id="mynav" itemscope itemprop="http://schema.org/SiteNavigationElement">
-<div>
-  <div id="brand"><a href="/" class="rdm"><img src="/images/bootstrap-solid.svg" alt="bootstrap">Red Magic Systems</a></div>
-  <div id="hamburger"><a id="menu-item-01" data-toggle="collapse" href=".collapseNav" role="button" aria-expanded="false" aria-controls="collapseMenu"><i class="fa fa-bars text-light"></i><span class="sr-only">メニュー</span></a></div>
-  <div id="collapseNav" class="nocollapse-md collapseNav collapse">
-  <ul class="top-categories">
-    <li class="dropdown">
-  <a href="#collapseNav01" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseMenu">ブログ</a>
-  <button class="dropdown-toggle" type="button" id="menu-item-01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ブログ</button>
-  <ul id="collapseNav01" class="dropdown-menu-md" aria-labelledby="menu-item-01">
-    <li><a href="#">渋谷</a></li>
-    <li><a href="#">恵比寿</a></li>
-    <li><a href="#">目黒</a></li>
-    <li><a href="#">五反田</a></li>
-  </ul>
-  </li>
-    <li>
-  <a id="menu-item-02" href="#collapseNav02" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseMenu">写真</a>
-  <button class="dropdown-toggle" type="button" id="menu-item-02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">写真</button>
-  <ul id="collapseNav02" class="dropdown-menu-md" aria-labelledby="menu-item-02">
-    <li><a href="#">大崎</a></li>
-    <li><a href="#">品川</a></li>
-    <li><a href="#">田町</a></li>
-    <li><a href="#">新橋</a></li>
-  </ul></li>
-    <li>
-  <a id="menu-item-03" href="#collapseNav03" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseMenu">ナレッジ</a>
-  <button class="dropdown-toggle" type="button" id="menu-item-03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ナレッジ</button>
-  <ul id="collapseNav03" class="dropdown-menu-md" aria-labelledby="menu-item-03">
-    <li><a href="#">有楽町</a></li>
-    <li><a href="#">東京</a></li>
-    <li><a href="#">神田</a></li>
-    <li><a href="#">秋葉原</a></li>
-  </ul></li>
-    <li>
-  <a id="menu-item-04" href="#collapseNav04" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseMenu">オススメの一冊</a>
-  <button class="dropdown-toggle" type="button" id="menu-item-04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">オススメの一冊</button>
-  <ul id="collapseNav04" class="dropdown-menu-md" aria-labelledby="menu-item-04">
-    <li><a href="#">柏</a></li>
-    <li><a href="#">流山おおたかの森</a></li>
-    <li><a href="#">初石</a></li>
-    <li><a href="#">江戸川台</a></li>
-  </ul></li>
-  </ul>
-  </div>
-  <div id="sns" class="collapseNav collapse nocollapse-md">
-  <ol>
-  <li itemprop="position"><a href="#" id="camera">GANREF</a></li>
-  <li><a href="#" id="facebook">facebook</a></li>
-  <li><a href="#" id="envelope">お問い合わせ</a></li>
-  </ol>
-  </div>
+<div class="container-fluid bg-danger border-secondary border-bottom">
+<div class="container">
+<nav id="gnav" itemscope itemprop="http://schema.org/SiteNavigationElement" class="navbar navbar-light navbar-expand-md">
+  <a class="navbar-brand" href="/"><img src="/images/bootstrap-solid.svg" alt="bootstrap" width="32" height="32"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="active">
+        <a href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li>
+        <a href="#">Features</a>
+      </li>
+      <li>
+        <a href="#">Pricing</a>
+      </li>
 
-</div>
+<li class="dropdown-md">
+<a class="nav-link dropdown-md-toggle btn btn-danger" href="#" id="navbarHybrid" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="navbarHybridCollapse">
+Dropdown
+</a>
+<ul id="navbarHybridCollapse" class="dropdown-menu table-secondary border-secondary py-0 list-unstyled">
+<li><a class="dropdown-item btn btn-danger py-2 px-3" href="#">Action</a></li>
+<li><a class="dropdown-item btn btn-danger py-2 px-3" href="#">Another action</a></li>
+<li><div class="dropdown-divider"></div></li>
+<li><a class="dropdown-item btn btn-danger py-2 px-3" href="#">Something else here</a></li>
+</ul>
+</li>
+
+      <li>
+  <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <div id="collapseExample" class="card card-body collapse">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+      </li>
+    </ul>
+  </div>
 </nav>
+</div>
 </div><!-- /.container-fluid -->
 
 <main>
@@ -502,7 +489,7 @@
 </footer>
 <div id="pagetop"><a href="#"><span>ページトップへ戻る</span></a></div>
 
-<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.slim.min.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/clipboard.min.js"></script>
@@ -510,26 +497,6 @@
 <script type="text/javascript" src="/js/highlight.pack.min.js"></script>
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 <script src="/js/myscript.js"></script>
-<script>
-var clipboard = new ClipboardJS('.btn');
-
-clipboard.on('success', function(e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    console.info('Trigger:', e.trigger);
-
-    e.clearSelection();
-});
-
-clipboard.on('error', function(e) {
-    console.error('Action:', e.action);
-    console.error('Trigger:', e.trigger);
-});
-
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-</script>
 <!-- <script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?55XhnyL0KvI%3D&aa=1&ab=2" charset="utf-8"></script> -->
 
 
